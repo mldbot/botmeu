@@ -7,6 +7,11 @@ def twiml():
     otp = request.args.get("otp")
     client = request.args.get("client")
     company = request.args.get("company")
+
+    # Verificare simplă pentru parametri lipsă
+    if not otp or not client or not company:
+        return Response("<Response><Say>Some parameters are missing.</Say></Response>", mimetype="application/xml")
+
     xml = f"""<?xml version="1.0" encoding="UTF-8"?>
 <Response>
     <Say voice="alice">
