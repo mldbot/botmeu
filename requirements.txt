@@ -1,4 +1,4 @@
-discord
-discord-py-slash-command
-Flask
-twilio
+discord==1.7.3
+discord-py-slash-command==0.1.4
+Flask==2.0.1
+twilio==6.57.0
